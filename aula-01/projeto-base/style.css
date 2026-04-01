@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0b0b0b;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background: #161616;
+  padding: 24px;
+  border-radius: 12px;
+  width: 320px;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 20px;
+  color: #cccccc;
+}
+
+button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  background: #f7df1e;
+  color: #111;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+#saida {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #bbbbbb;
+}
