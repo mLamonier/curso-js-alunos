@@ -1,5 +1,8 @@
 # Aula 1 — Primeira interação com JavaScript
 
+> [!NOTE]
+> Nesta aula, você vai pegar uma página pronta em HTML e CSS e transformar esse projeto em algo que finalmente reage ao usuário.
+
 ## Saindo do estático
 
 Até aqui, usando HTML e CSS, você já consegue montar páginas estruturadas e com um bom visual.
@@ -8,7 +11,7 @@ Mas ainda existe uma limitação clara: a página não reage.
 
 Se um usuário clicar em um botão, nada acontece. Se um texto precisar mudar, isso não acontece sozinho.
 
-A página existe, mas é completamente estática.
+A página existe, mas ainda é completamente estática.
 
 É exatamente nesse ponto que entra o JavaScript.
 
@@ -20,7 +23,8 @@ O JavaScript é a linguagem responsável por adicionar comportamento à página.
 
 Ele permite que o sistema responda ao usuário, altere conteúdos, execute lógica e controle o que acontece na tela.
 
-Uma forma simples de entender isso é pensar que o HTML define o que existe, o CSS define como aparece e o JavaScript define o que acontece.
+> [!TIP]
+> Uma forma simples de lembrar disso é pensar assim: o HTML define o que existe, o CSS define como aparece e o JavaScript define o que acontece.
 
 ---
 
@@ -28,11 +32,11 @@ Uma forma simples de entender isso é pensar que o HTML define o que existe, o C
 
 O JavaScript roda diretamente no navegador.
 
-Isso significa que o código é executado no computador do usuário, no momento em que a página é carregada.
+Isso significa que o código é executado no computador do usuário no momento em que a página é carregada.
 
 Além disso, ele consegue acessar os elementos do HTML e modificá-los em tempo real.
 
-Isso permite criar páginas dinâmicas, sem precisar recarregar tudo.
+Isso permite criar páginas dinâmicas sem precisar recarregar tudo.
 
 ---
 
@@ -40,9 +44,7 @@ Isso permite criar páginas dinâmicas, sem precisar recarregar tudo.
 
 Nesta aula, você não vai apenas ler código.
 
-Vamos trabalhar em um pequeno projeto já pronto visualmente.
-
-O HTML e o CSS já estão preparados. O seu papel será usar JavaScript para transformar essa página em algo interativo.
+Vamos trabalhar em um pequeno projeto que já está pronto visualmente. O HTML e o CSS já foram preparados. O seu papel será usar JavaScript para transformar essa página em algo interativo.
 
 Você vai escrever código no VS Code, salvar e ver o resultado direto no navegador.
 
@@ -52,13 +54,16 @@ Você vai escrever código no VS Code, salvar e ver o resultado direto no navega
 
 Abra a pasta `projeto-base` no VS Code.
 
-Você deve ver três arquivos:
+Você deve encontrar esta estrutura:
 
-- index.html
-- style.css
-- script.js
+```text
+projeto-base/
+├── index.html
+├── style.css
+└── script.js
+```
 
-O arquivo onde vamos trabalhar é o script.js.
+O arquivo onde vamos trabalhar é o `script.js`.
 
 É nele que toda a lógica da página será escrita.
 
@@ -68,9 +73,11 @@ O arquivo onde vamos trabalhar é o script.js.
 
 Para que o JavaScript funcione, ele precisa estar conectado ao HTML.
 
-Isso é feito através da seguinte linha no final do arquivo HTML:
+Isso é feito com a seguinte linha no final do arquivo HTML:
 
+```html
 <script src="script.js"></script>
+```
 
 Essa linha faz com que o navegador carregue e execute o arquivo JavaScript junto com a página.
 
@@ -82,23 +89,21 @@ Antes de alterar qualquer coisa, precisamos acessar um elemento do HTML.
 
 O JavaScript faz isso usando seletores.
 
+```js
 const titulo = document.querySelector("#titulo");
+```
 
-Esse código busca um elemento pelo id.
+Esse código busca um elemento pelo `id`.
 
 Agora o JavaScript sabe exatamente qual elemento queremos controlar.
 
----
+### Faça agora
 
-## Prática
-
-Abra o arquivo script.js e escreva o código acima.
+Abra o arquivo `script.js` e escreva o código acima.
 
 Salve o arquivo e atualize a página no navegador.
 
-Nada visível vai acontecer ainda, e isso é esperado.
-
-Neste momento, você apenas acessou o elemento.
+Nada visível vai acontecer ainda, e isso é esperado. Neste momento, você apenas acessou o elemento.
 
 ---
 
@@ -106,21 +111,19 @@ Neste momento, você apenas acessou o elemento.
 
 Agora que temos acesso ao elemento, podemos alterar o que está sendo exibido.
 
+```js
 titulo.textContent = "Texto alterado com JavaScript";
+```
 
 Esse comando substitui o texto do elemento na página.
 
----
+### Faça agora
 
-## Prática
-
-Adicione essa linha no seu script.js.
+Adicione essa linha no seu `script.js`.
 
 Salve e atualize o navegador.
 
-Agora você deve ver o texto sendo alterado automaticamente.
-
-Isso mostra que o JavaScript já está controlando a página.
+Agora você deve ver o texto sendo alterado automaticamente. Isso mostra que o JavaScript já está controlando a página.
 
 ---
 
@@ -132,7 +135,9 @@ Mas o mais importante é fazer a página reagir ao usuário.
 
 Para isso, vamos trabalhar com um botão.
 
+```js
 const botao = document.querySelector("#btnMensagem");
+```
 
 Esse código seleciona um botão da página.
 
@@ -142,49 +147,47 @@ Esse código seleciona um botão da página.
 
 Agora vamos fazer algo acontecer quando o botão for clicado.
 
+```js
 botao.addEventListener("click", () => {
   console.log("Botão clicado");
 });
+```
 
 Esse código escuta o clique no botão e executa uma ação.
 
----
+### Faça agora
 
-## Prática
-
-Adicione esse código no seu arquivo.
+Adicione esse trecho ao seu arquivo.
 
 Salve, abra a página e clique no botão.
 
 Depois, abra o console do navegador.
 
-Você deve ver a mensagem sendo exibida.
-
-O console não é o foco da aula, mas é uma ferramenta importante para testes.
+Você deve ver a mensagem sendo exibida. O console não é o foco da aula, mas já começa a aparecer aqui como ferramenta importante de teste.
 
 ---
 
 ## Criando uma interação real
 
-Agora vamos substituir o console por algo visível na página.
+Agora vamos substituir o console por algo visível na própria página.
 
+```js
 const saida = document.querySelector("#saida");
 
 botao.addEventListener("click", () => {
   saida.textContent = "Você clicou no botão!";
 });
+```
 
 Agora o clique altera o conteúdo da página.
 
----
-
-## Prática
+### Faça agora
 
 Atualize seu código com esse novo comportamento.
 
 Clique no botão e observe o que muda na tela.
 
-Tente alterar o texto para ver como o comportamento muda.
+Tente alterar o texto para perceber como o comportamento muda junto com o código.
 
 ---
 
@@ -192,16 +195,16 @@ Tente alterar o texto para ver como o comportamento muda.
 
 O JavaScript pode controlar vários elementos ao mesmo tempo.
 
+```js
 botao.addEventListener("click", () => {
   titulo.textContent = "Agora tudo mudou";
   saida.textContent = "O JavaScript alterou a página";
 });
+```
 
 Agora mais de um elemento é modificado com uma única ação.
 
----
-
-## Prática
+### Faça agora
 
 Atualize o seu código para alterar mais de um elemento ao clicar.
 
@@ -211,25 +214,23 @@ Isso ajuda a entender como o JavaScript controla diferentes partes da página ao
 
 ## Desafio
 
-Agora vá até a pasta desafio.
+Agora vá até a pasta `desafio`.
 
-Use o botão com id #btnCor para criar uma nova interação.
+Use o botão com `id` `#btnCor` para criar uma nova interação.
 
 A ideia é mudar a cor do card quando o botão for clicado.
 
-Você já tem tudo que precisa para fazer isso.
+> [!IMPORTANT]
+> Você já tem tudo o que precisa para resolver esse desafio com o que foi visto até aqui.
 
-Se necessário, revise os exemplos anteriores.
+### Dicas
 
----
-
-## Dica
-
-Você vai precisar:
-
-- selecionar o elemento
+- selecionar o botão
+- selecionar o elemento `.card`
 - escutar o clique
 - alterar um estilo com JavaScript
+
+Se necessário, revise os exemplos anteriores antes de olhar o gabarito.
 
 ---
 
@@ -239,6 +240,6 @@ Nesta aula, você saiu de uma página estática para uma página que reage ao us
 
 Você aprendeu a acessar elementos, modificar conteúdos e responder a eventos.
 
-Mais importante do que isso, você aplicou tudo isso em um projeto real.
+Mais importante do que isso, aplicou tudo em um projeto real, com começo, prática e desafio.
 
 Esse é o primeiro passo na programação com JavaScript.
