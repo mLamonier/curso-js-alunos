@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel do Dia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="painel">
+    <p class="etiqueta">Aula 2 · Painel do Dia</p>
+    <h1 id="titulo">Seu painel ainda está genérico</h1>
+    <p id="descricao">Digite seu nome e o foco do dia para personalizar este espaço.</p>
+
+    <section class="bloco">
+      <label class="campo">
+        <span>Seu nome</span>
+        <input id="inputNome" type="text" placeholder="Ex: Miguel">
+      </label>
+
+      <label class="campo">
+        <span>Foco do dia</span>
+        <input id="inputFoco" type="text" placeholder="Ex: estudar JavaScript">
+      </label>
+
+      <button id="btnAtualizar">Atualizar painel</button>
+    </section>
+
+    <section class="bloco bloco-secundario">
+      <p class="rotulo-secundario">Recado secundário</p>
+      <p id="recado">Nenhum recado definido por enquanto.</p>
+
+      <label class="campo">
+        <span>Novo recado</span>
+        <input id="inputRecado" type="text" placeholder="Ex: revisar a aula depois">
+      </label>
+
+      <button id="btnRecado">Salvar recado</button>
+    </section>
+
+    <p id="saida">Aguardando personalização...</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
