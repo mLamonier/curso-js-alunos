@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #071019;
+  --panel: #111c27;
+  --panel-border: #213445;
+  --text: #f5f7fb;
+  --muted: #9eb0c2;
+  --accent: #f7df1e;
+  --accent-text: #161616;
+  --input: #0b141d;
+  --secondary: #dbe8f5;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at top, #11273d 0%, #071019 55%),
+    #071019;
+  color: var(--text);
+  font-family: Arial, sans-serif;
+}
+
+.painel {
+  width: min(100%, 460px);
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.etiqueta {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(247, 223, 30, 0.12);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+#descricao {
+  margin-bottom: 18px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.bloco {
+  margin-top: 18px;
+  padding: 18px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.bloco-secundario {
+  margin-top: 14px;
+}
+
+.campo {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.campo span,
+.rotulo {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--panel-border);
+  border-radius: 10px;
+  background: var(--input);
+  color: var(--text);
+  font-size: 15px;
+}
+
+input::placeholder {
+  color: #73859a;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: var(--accent-text);
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.resumo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.cartao {
+  padding: 18px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.cartao-destaque {
+  background: rgba(247, 223, 30, 0.12);
+  border-color: rgba(247, 223, 30, 0.24);
+}
+
+#resumo,
+#resultado,
+#tempo {
+  line-height: 1.5;
+}
+
+#resultado {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--secondary);
+}
+
+#saida {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (max-width: 560px) {
+  .resumo {
+    grid-template-columns: 1fr;
+  }
+}

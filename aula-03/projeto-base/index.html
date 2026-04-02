@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel do Dia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="painel">
+    <p class="etiqueta">Aula 3 - Painel do Dia</p>
+    <h1 id="titulo">Seu painel agora também faz contas</h1>
+    <p id="descricao">Preencha os dados do dia para calcular seu progresso.</p>
+
+    <section class="bloco">
+      <label class="campo">
+        <span>Seu nome</span>
+        <input id="inputNome" type="text" placeholder="Ex: Miguel">
+      </label>
+
+      <label class="campo">
+        <span>Foco do dia</span>
+        <input id="inputFoco" type="text" placeholder="Ex: estudar JavaScript">
+      </label>
+
+      <label class="campo">
+        <span>Blocos planejados</span>
+        <input id="inputMeta" type="number" placeholder="Ex: 8">
+      </label>
+
+      <label class="campo">
+        <span>Blocos concluídos</span>
+        <input id="inputConcluido" type="number" placeholder="Ex: 3">
+      </label>
+
+      <button id="btnCalcular">Calcular progresso</button>
+    </section>
+
+    <section class="resumo">
+      <article class="cartao">
+        <p class="rotulo">Resumo</p>
+        <p id="resumo">Nenhum cálculo feito ainda.</p>
+      </article>
+
+      <article class="cartao cartao-destaque">
+        <p class="rotulo">Pontuação do dia</p>
+        <p id="resultado">0 pontos</p>
+      </article>
+    </section>
+
+    <section class="bloco bloco-secundario">
+      <p class="rotulo">Tempo restante</p>
+      <p id="tempo">Ainda não calculado.</p>
+    </section>
+
+    <p id="saida">Aguardando cálculo...</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
