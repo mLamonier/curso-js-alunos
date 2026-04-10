@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel do Dia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="painel">
+    <p class="etiqueta">Aula 6 - Painel do Dia</p>
+    <h1 id="titulo">Seu painel agora lembra das tarefas</h1>
+    <p id="descricao">Use os botões abaixo para mostrar, salvar e restaurar dados no navegador.</p>
+
+    <section class="bloco">
+      <p class="rotulo">Ações principais</p>
+      <p id="resumo">As tarefas ainda não foram carregadas nesta visita.</p>
+
+      <div class="acoes">
+        <button id="btnMostrarPainel">Mostrar tarefas</button>
+        <button id="btnSalvarTarefas" class="secundario">Salvar tarefas</button>
+        <button id="btnRestaurarTarefas" class="secundario">Restaurar tarefas</button>
+      </div>
+    </section>
+
+    <section class="bloco bloco-secundario">
+      <p class="rotulo">Tarefas estruturadas</p>
+      <ul id="listaTarefas" class="lista-tarefas">
+        <li class="item-vazio">Nenhuma tarefa exibida ainda.</li>
+      </ul>
+    </section>
+
+    <section class="bloco">
+      <p class="rotulo">Leitura em JSON</p>
+      <pre id="jsonSaida">JSON ainda não gerado.</pre>
+    </section>
+
+    <section class="bloco">
+      <p class="rotulo">Desafio extra</p>
+      <label class="campo">
+        <span>Filtro favorito</span>
+        <select id="selectFiltro">
+          <option value="Todas">Todas</option>
+          <option value="Alta">Alta</option>
+          <option value="Média">Média</option>
+          <option value="Concluídas">Concluídas</option>
+        </select>
+      </label>
+
+      <button id="btnSalvarFiltro" class="secundario">Salvar filtro favorito</button>
+      <p id="filtroAtual">Nenhum filtro favorito salvo ainda.</p>
+    </section>
+
+    <p id="saida">O painel está pronto para começar a salvar dados.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
