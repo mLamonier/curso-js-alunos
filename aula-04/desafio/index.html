@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel do Dia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="painel">
+    <p class="etiqueta">Aula 4 - Painel do Dia</p>
+    <h1 id="titulo">Seu painel agora organiza várias tarefas</h1>
+    <p id="descricao">Clique no botão para montar a primeira lista de tarefas do dia.</p>
+
+    <section class="bloco">
+      <p class="rotulo">Plano atual</p>
+      <p id="resumo">Nenhuma tarefa foi carregada ainda.</p>
+      <button id="btnMostrarTarefas">Mostrar tarefas do dia</button>
+    </section>
+
+    <section class="bloco bloco-secundario">
+      <p class="rotulo">Lista de tarefas</p>
+      <ul id="listaTarefas" class="lista-tarefas">
+        <li class="item-vazio">Aguardando tarefas...</li>
+      </ul>
+    </section>
+
+    <section class="bloco">
+      <p class="rotulo">Desafio extra</p>
+
+      <label class="campo">
+        <span>Nova tarefa</span>
+        <input id="inputNovaTarefa" type="text" placeholder="Ex: revisar o exercício de arrays">
+      </label>
+
+      <button id="btnAdicionarTarefa">Adicionar tarefa</button>
+    </section>
+
+    <p id="saida">Use o botão acima para carregar sua lista.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
