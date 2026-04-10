@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel do Dia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="painel">
+    <p class="etiqueta">Aula 7 - Painel do Dia</p>
+    <h1 id="titulo">Seus dados agora aparecem de um jeito mais real</h1>
+    <p id="descricao">Clique no botão para exibir prazos e números formatados no painel.</p>
+
+    <section class="bloco">
+      <p class="rotulo">Visão geral</p>
+      <p id="resumo">O painel ainda não foi formatado nesta visita.</p>
+      <button id="btnMostrarPainel">Mostrar painel formatado</button>
+    </section>
+
+    <section class="resumo-grade">
+      <article class="cartao">
+        <p class="rotulo">Referência</p>
+        <p id="referenciaData">Data ainda não exibida.</p>
+      </article>
+
+      <article class="cartao">
+        <p class="rotulo">Contador</p>
+        <p id="contadorTarefas">0 tarefas</p>
+      </article>
+
+      <article class="cartao">
+        <p class="rotulo">Tempo total</p>
+        <p id="tempoTotal">0,0 horas planejadas</p>
+      </article>
+
+      <article class="cartao">
+        <p class="rotulo">Filtro salvo</p>
+        <p id="filtroAtual">Nenhum filtro salvo exibido ainda.</p>
+      </article>
+    </section>
+
+    <section class="bloco bloco-secundario">
+      <p class="rotulo">Tarefas do painel</p>
+      <ul id="listaTarefas" class="lista-tarefas">
+        <li class="item-vazio">Aguardando a lista formatada...</li>
+      </ul>
+    </section>
+
+    <section class="bloco">
+      <p class="rotulo">Desafio extra</p>
+      <p id="ultimaAtualizacao">Última atualização ainda não exibida.</p>
+    </section>
+
+    <p id="saida">O painel está pronto para formatar datas e números.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
