@@ -1,0 +1,21 @@
+{
+  "usuario": "Miguel",
+  "filtroFavorito": "Alta",
+  "tarefas": [
+    {
+      "titulo": "Revisar a aula anterior",
+      "horasEstimadas": 2.5,
+      "status": "Concluída"
+    },
+    {
+      "titulo": "Organizar o foco do dia",
+      "horasEstimadas": 3,
+      "status": "Pendente"
+    },
+    {
+      "titulo": "Atualizar a lista principal",
+      "horasEstimadas": 4.5,
+      "status": "Em andamento"
+    }
+  ]
+}
