@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel do Dia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="painel">
+    <p class="etiqueta">Aula 5 - Painel do Dia</p>
+    <h1 id="titulo">Suas tarefas agora têm mais contexto</h1>
+    <p id="descricao">Clique no botão para carregar tarefas com título, categoria e prioridade.</p>
+
+    <section class="bloco">
+      <p class="rotulo">Painel estruturado</p>
+      <p id="resumo">Nenhuma tarefa estruturada foi carregada ainda.</p>
+      <button id="btnMostrarPainel">Mostrar tarefas estruturadas</button>
+    </section>
+
+    <section class="bloco bloco-secundario">
+      <p class="rotulo">Tarefas do dia</p>
+      <ul id="listaTarefas" class="lista-tarefas">
+        <li class="item-vazio">Aguardando tarefas estruturadas...</li>
+      </ul>
+    </section>
+
+    <section class="bloco">
+      <p class="rotulo">Leitura em JSON</p>
+      <pre id="jsonSaida">JSON ainda não gerado.</pre>
+    </section>
+
+    <p id="saida">Use o botão para visualizar as tarefas com mais detalhes.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
