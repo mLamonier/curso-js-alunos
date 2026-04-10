@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel do Dia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="painel">
+    <p class="etiqueta">Aula 8 - Painel do Dia</p>
+    <h1 id="titulo">Seu painel agora busca uma inspiração externa</h1>
+    <p id="descricao">Clique no botão para carregar dados locais e uma frase vinda de uma API.</p>
+
+    <section class="bloco">
+      <p class="rotulo">Ação principal</p>
+      <p id="resumo">O painel ainda não buscou dados externos nesta visita.</p>
+      <button id="btnMostrarPainel">Atualizar painel e buscar inspiração</button>
+    </section>
+
+    <section class="resumo-grade">
+      <article class="cartao">
+        <p class="rotulo">Referência</p>
+        <p id="referenciaData">Data ainda não exibida.</p>
+      </article>
+
+      <article class="cartao">
+        <p class="rotulo">Contador</p>
+        <p id="contadorTarefas">0 tarefas</p>
+      </article>
+
+      <article class="cartao">
+        <p class="rotulo">Tempo total</p>
+        <p id="tempoTotal">0,0 horas planejadas</p>
+      </article>
+
+      <article class="cartao">
+        <p class="rotulo">Filtro salvo</p>
+        <p id="filtroAtual">Nenhum filtro salvo exibido ainda.</p>
+      </article>
+    </section>
+
+    <section class="bloco bloco-secundario">
+      <p class="rotulo">Inspiração do dia</p>
+      <blockquote id="frase">A frase ainda não foi carregada.</blockquote>
+      <p id="autor">Autor ainda não exibido.</p>
+      <p id="detalheFrase">Detalhe extra ainda não exibido.</p>
+      <p id="statusBusca">Aguardando a busca da API.</p>
+    </section>
+
+    <p id="saida">O painel está pronto para buscar dados externos.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
